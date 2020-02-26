@@ -1,0 +1,359 @@
+@media all and (max-width: 891px) {
+    .produit {
+        display: flex;
+        
+        flex-wrap: wrap;
+        
+        margin: auto;
+        
+    }
+
+    #prixProduit {
+        font-size: 25px;
+    }
+    
+
+}
+
+/* Polices */
+
+@font-face {
+    font-family: DKLemon;
+    src: url(polices/DKLemon.otf);
+}
+@font-face {
+    font-family: "Roboto-Bold";
+    src: url(polices/Roboto-Bold.ttf);
+}
+@font-face {
+    font-family: "Roboto-Thin";
+    src: url(polices/Roboto-Thin.ttf);
+}
+@font-face {
+    font-family: "Roboto-Medium";
+    src: url(polices/Roboto-Medium.ttf);
+}
+
+
+/* Animation */
+
+@keyframes productMouvement {
+    from {
+        transform: translateX(300px);
+        
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+/*  Body */
+
+body {
+    max-width: 1000px;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    top: 0px;
+    left: 0px;
+    background-image: url(images/fond2.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+}
+
+/* Header */
+
+header {
+    max-width: 1000px;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    top: 0px;
+    align-items: center;
+    width: 100%;
+    height: 75px;
+    background: linear-gradient(45deg, #ed9e2f 0%,#b27de8 100%);
+    display: flex;
+    justify-content: space-between;
+    z-index: 9999999;
+    position: fixed;
+}
+#panier_button {
+    
+    max-width: 70px;
+    height: 35px;
+    text-align: center;
+    margin-right: 25px;
+    cursor: pointer;
+    background-color: #ed9e2f;
+    border: 0px;
+    border-radius: 2px;
+    color: #F3E9F1;
+    font-family: "DKLemon";
+    
+}
+
+header h2 {
+    /* margin: auto; */
+    padding-left: 25px;
+    color: #F3E9F1;
+    font-size: 50px;
+    font-family: "DKlemon";
+}
+
+
+/* Produit */
+
+#retourMenu {
+    background-color: #F3E9F1;
+    border-radius: 5px;
+    width: 100px;
+    margin: 20px 20px 20px 20px;
+    padding: 5px 5px 5px 5px;
+    font-family: "roboto-bold";
+    transition: all 1s;
+    opacity: 0;
+    animation: productMouvement 1.5s forwards;
+    animation-delay: 0.5s;
+    cursor: pointer;
+    
+}
+
+.mainSection {
+    margin-top: 150px;
+    height: 800px;
+}
+
+.produit{
+    background-color: #F3E9F1;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    margin: 20px 20px 20px 20px;
+    /* flex-wrap: wrap; */
+    /* height: 50%; */
+    transition: all 1s;
+    opacity: 0;
+    animation: productMouvement 1.5s forwards;
+    
+    animation-delay: 0.9s;
+    
+}
+.panier {
+    background-color: #F3E9F1;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    margin: 20px 20px 20px 20px;
+    /* height: 50%; */
+    transition: all 1s;
+    
+}
+
+.col-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 20px;
+}
+
+.col-left > img {
+    /* max-width: 300px; */
+    
+    max-height: 250px;
+    margin-top: 20px ;
+    border-radius: 5px;
+    margin-right: 20px;
+    transition: all 0.3s;
+    animation: productMouvement 2s forwards;
+    /* animation-duration: 1.5s; */
+    
+}
+
+.col-left > form {
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+
+
+.titreSection {
+    max-width: 500px;
+    height: 100%;
+    margin: auto;
+    padding-bottom: 100px;
+    text-align: center;
+    color: #F3E9F1;
+    font-size: 3em;
+    font-family: "DKLemon";
+}
+
+
+
+
+
+
+
+.col-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;  
+     
+    padding: 20px 20px 20px 20px;
+}
+
+#titreProduit {
+    font-family: "Roboto-Bold";
+}
+#resumeProduit {
+    font-family: "roboto-Thin";
+}
+#prixProduit {
+    font-family: "Roboto-Medium";
+    margin-right: 25px;
+    font-size: 35px;
+    
+}
+.commandAndPrice {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.commander_button {
+    
+    
+    
+    text-align: center;
+    right: 15px;
+    cursor: pointer;
+    background: linear-gradient(45deg, #ed9e2f 0%,#b27de8 100%);
+    border: 0px;
+    border-radius: 5px;
+    margin: 15px 15px 15px 15px;
+    color:blanchedalmond;
+    font-size: 25px;
+    
+    padding: 10px 15px 10px 15px;
+    
+    font-family: "Roboto_Bold";
+}
+
+.commander_button:hover {
+    background: linear-gradient(45deg, #b27de8 0%,#ed9e2f 100%);
+    
+}
+
+.finaliser_button {
+    
+    text-align: center;
+    /* right: 15px; */
+    cursor: pointer;
+    background: linear-gradient(45deg, #ed9e2f 0%,#b27de8 100%);
+    border: 0px;
+    border-radius: 5px;
+    margin: 15px 15px 15px 15px;
+    color:blanchedalmond;
+    font-size: 30px;
+    
+    padding: 10px 15px 10px 15px;
+    
+    font-family: "Roboto_Bold";
+    
+}
+.totalPrice_form {
+    margin: 10px 10px 10px 10px;
+}
+
+
+
+
+a {
+    text-decoration: none;
+    text-emphasis: none;
+    text-decoration: none;
+    color: #F3E9F1;
+}
+
+a:visited {
+    text-emphasis: none;
+    text-decoration: none;
+}
+
+#elementPanier {
+    display: flex;
+    flex-direction: column;
+    
+    
+    
+}
+
+.imgProduit_panier {
+    
+    max-height: 35px;
+}
+
+.panier_produit {
+    align-items: center;
+    background-color: #ed9e2f;
+    color: #F3E9F1;
+    margin: 15px 10% 15px 10%;
+    padding: 5px 5px 5px 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 5px;
+    
+}
+
+.removeProduit_button {
+    max-width: 15px;
+    max-height: 15px;
+    cursor: pointer;
+}
+
+.totalPrice {
+    background-color: white;
+    color: black;
+    margin: auto;
+    padding: 15px 15px 15px 15px;
+    border-radius: 5px;
+
+}
+
+#formulaire {
+    background-color: #F3E9F1;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    margin: 20px 20px 20px 20px;
+    /* height: 50%; */
+    transition: all 1s;
+    
+}
+form {
+    margin: 20px 20px 20px 20px;
+    
+}
+
+.form_item {
+    padding: 10px 10px 10px 10px;
+}
+
+.red {
+    border: solid 1px red;
+}
+
+/* :required
+{
+    border: solid 1px red;
+    
+} */

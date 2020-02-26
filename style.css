@@ -1,0 +1,202 @@
+@media all and (max-width: 891px) {
+    .produit {
+        display: flex;
+        
+        flex-wrap: wrap;
+        
+        margin: auto;
+        
+    }
+
+    #prixProduit {
+        font-size: 25px;
+    }
+}
+
+@media all and (max-width: 550px){
+    img {
+        width: 400px;
+    }
+}
+
+@font-face {
+    font-family: DKLemon;
+    src: url(polices/DKLemon.otf);
+}
+@font-face {
+    font-family: "Roboto-Bold";
+    src: url(polices/Roboto-Bold.ttf);
+}
+@font-face {
+    font-family: "Roboto-Thin";
+    src: url(polices/Roboto-Thin.ttf);
+}
+@font-face {
+    font-family: "Roboto-Medium";
+    src: url(polices/Roboto-Medium.ttf);
+}
+body {
+    max-width: 1000px;
+    /* justify-content: center; */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    top: 0px;
+    left: 0px;
+    background-image: url(images/fond2.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* background-size: 100%; */
+    
+}
+
+header {
+    max-width: 1000px;
+    /* justify-content: center; */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    top: 0px;
+    align-items: center;
+    width: 100%;
+    height: 75px;
+    background: linear-gradient(45deg, #ed9e2f 0%,#b27de8 100%);
+    display: flex;
+    justify-content: space-between;
+    z-index: 9999999;
+    position: fixed;
+}
+
+
+header h2 {
+    /* margin: auto; */
+    padding-left: 25px;
+    color: #F3E9F1;
+    font-size: 50px;
+    font-family: "DKlemon";
+}
+.imgProduit {
+    
+    max-height: 300px;
+    /* max-width: 450px; */
+    border-radius: 5px;
+    
+    margin: auto 20px auto 0px;
+    display: flex;
+    /* padding-right: 20px; */
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+
+.mainSection {
+    margin-top: 175px;
+}
+
+.titreSection {
+    max-width: 500px;
+    height: 100%;
+    margin: auto;
+    padding-bottom: 100px;
+    text-align: center;
+    color: #F3E9F1;
+    font-size: 3em;
+    font-family: "DKLemon";
+}
+
+.imgProduit:hover {
+    transform: scale(1.05);
+
+    
+}
+
+
+.produit{
+    background-color:#F3E9F1;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    
+    
+    transition: all 1s;
+    margin: 75px 20px 75px 20px;
+    padding: 20px 20px 20px 20px;
+}
+
+.produit:hover {
+    box-shadow: 2px 2px 10px 1px #F3E9F1;
+}
+
+.produit_contenu {
+    display: flex;
+    flex-direction: column;
+}
+
+.titreProduit {
+    font-family: "Roboto-Bold";
+}
+.resumeProduit {
+    font-family: "roboto-Thin";
+}
+.prixProduit {
+    font-family: "Roboto-Medium";
+    font-size: 35px;
+}
+
+a {
+    text-decoration: none;
+    text-emphasis: none;
+    text-decoration: none;
+    color: black;
+}
+
+a:visited {
+    text-emphasis: none;
+    text-decoration: none;
+}
+
+header a {
+    color: #F3E9F1;
+}
+
+#panier_button {
+    
+    max-width: 70px;
+    min-height: 35px;
+    text-align: center;
+    color: #F3E9F1;
+    cursor: pointer;
+    background-color: #ed9e2f;
+    border: 0px;
+    border-radius: 2px;
+    margin-right: 25px;
+    font-family: "DKLemon";
+    
+}
+
+.prixCommanderSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.commander_button {
+    max-width: 250px;
+    height: 35px;
+    text-align: center;
+    right: 15px;
+    cursor: pointer;
+    background: linear-gradient(45deg, #ed9e2f 0%,#b27de8 100%);
+    border: 0px;
+    border-radius: 5px;
+    margin-top: 40px;
+    margin-right: 20px;
+    /* margin: 0 15px 15px 50px; */
+    color:blanchedalmond;
+    font-size: 30px;
+    
+    padding: 10px 15px 10px 15px;
+    
+    font-family: "Roboto_Bold";
+} 

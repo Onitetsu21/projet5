@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>OriPhoto</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="styleProduit.css">
+</head>
+<body>
+
+    <header>
+        <h2 class="nomSite"><a href="index.html">OriPhoto</a></h2>
+        <button id="panier_button">Panier <span id="panier-count">0</span> </button>
+    </header>
+
+    <section class="mainSection">
+        
+        <div id="retourMenu">Retourner aux produits</div>
+        
+        <div class="produit">
+            <div class="col-left">
+                <img id="imgProduit" class="image-produit" src="" alt="Appareil Photo1">
+                <form action="Personnalisation">Personnalisez votre lentille :
+                    <select class= "persoLens" name="personnalisation" id="personnalisation">
+                        <!-- <option value="1">Lentille HD</option>
+                        <option value="2">Lentille HD Ultra</option>
+                        <option value="3">Lentille Ultra pro</option> -->
+                    </select>
+                </form>
+            </div>
+            <div class="col-right">
+                <h2 id="titreProduit"></h2>
+                <p id="resumeProduit"></p>
+                <div class="commandAndPrice">
+                    <h4 id="prixProduit"></h4>
+                    <div class="commander_button"> 
+                        COMMANDER
+                    </div>   
+                </div>
+                
+            </div>
+        </div>
+
+     
+    </section>
+
+    <footer></footer>
+    
+    <script type="text/javascript" src="detailProduit.js"></script>
+</body>
+</html>
