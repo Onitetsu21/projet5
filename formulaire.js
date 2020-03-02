@@ -37,21 +37,6 @@ finishCommand.addEventListener("click", function () {
     let prenomFormulaire = document.querySelector("#surname").value;
     let emailFormulaire = document.querySelector("#mail").value;
 
-    
-
-    // emailFormulaire.addEventListener("input", function isValid(value){
-    //     return /\b[\w\.-]+@[\w\.-]+\.\w{2,4}\b/gi.test(value);
-        
-    // })
-    // if (!isValid){
-    //        document.querySelector("#mail").className("red"); 
-    // }else {
-    //     document.querySelector("#mail").classList.remove("red");
-    // }
-    
-
-
-
     let telFormulaire = document.querySelector("#tel").value;
 
     formContent.push(nomFormulaire + " " + prenomFormulaire + " " + emailFormulaire + " "+ telFormulaire + " ");

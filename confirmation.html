@@ -6,19 +6,25 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>OriPhoto</title>
     <!-- <link rel="stylesheet" href="style.css"> -->
-    <link rel="stylesheet" href="styleProduit.css">
+    <link rel="stylesheet" href="stylePage.css">
 </head>
 <body>
 
     <header>
         <h2 class="nomSite"><a href="index.html">OriPhoto</a></h2>
-        <button id="panier_button">Panier <span id="panier-count">0</span></button>
+        <!-- <button id="panier_button">Panier <span id="panier-count">0</span></button> -->
     </header>
 
-    <section class="mainSection">
+    <section class="mainSection ">
         
+        <div class="confirmCommand">
+            <div class="confirmCommand_msg">
+                Merci ! Votre commande de numéro : <span class="idCommand"></span> est confirmée ! <br>
+                Pour un total de : <span class="confirmCommand_totalPrice"></span>€
+            </div>
+        </div>
         
-        <div id="formulaire">
+        <!-- <div id="formulaire">
             <form action="" method="POST">
                 <div class="form_item">
                     <label for="name"> Nom :</label>
@@ -41,7 +47,7 @@
                 <div class="totalPrice_form"></div>
                 <input class="finaliser_button" type="submit" placeholder="Finaliser la commande" value="Finaliser la commande !"> 
             </form>
-            
+             -->
             <!-- <a href="#">FINALISER LA COMMANDE</a> -->
             <!-- </div> -->
         </div>
@@ -51,7 +57,7 @@
 
     <footer></footer>
     
-    <script type="text/javascript" src="formulaire.js"></script>
+    <script type="text/javascript" src="confirmCommand.js"></script>
     
 </body>
 </html>

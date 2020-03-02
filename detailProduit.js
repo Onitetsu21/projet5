@@ -11,12 +11,9 @@ document.querySelector("#titreProduit").innerHTML = produitSelected.name;
 document.querySelector("#prixProduit").innerHTML = produitSelected.price + " €";
 
 
-// let optionLens = "";
+
 let personnalisationLens = document.querySelector('.persoLens');
 
-// let personnalisationLens = document.createElement("select");
-//     personnalisationLens.className = "persoLens";
-//     panier_produit.appendChild(personnalisationLens);
 
         selectedLens = produitSelected.lenses[0]
         personnalisationLens.addEventListener("change", function (){
@@ -33,18 +30,7 @@ let personnalisationLens = document.querySelector('.persoLens');
         personnalisationLens.appendChild(optionLens);
 
         };
-
-// let optionLens = "";
-// let personnalisationLens = document.querySelector('.persoLens');
-// for(let i = 0; i < produitSelected.lenses.length; i++){
-//     optionLens = document.createElement("option")
-//     optionLens.className = "optionLens"
-//     personnalisationLens.appendChild(optionLens);
-//     optionLens.innerHTML += produitSelected.lenses[i];
-// }
-
-
-    
+   
 
 let commandButton = document.querySelector(".commander_button")
 commandButton.addEventListener('click', function () {
@@ -54,7 +40,7 @@ commandButton.addEventListener('click', function () {
     }else{
         
         panierStored = JSON.parse(panierStored);
-        console.log(panierStored.length)
+        
         panier_countElt.innerHTML = panierStored.length + 1;
         
     }  

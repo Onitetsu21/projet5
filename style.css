@@ -1,17 +1,23 @@
-@media all and (max-width: 891px) {
+@media all and (max-width: 944px) {
     .produit {
         display: flex;
-        
         flex-wrap: wrap;
-        
-        margin: auto;
-        
+        margin: auto; 
     }
-
     #prixProduit {
         font-size: 25px;
     }
+    .col-left {
+        margin: auto;
+        padding-left: 15px;
+        padding-top: 20px ;
+    }
+    .imgProduit {
+        margin: auto;
+    }
 }
+
+
 
 @media all and (max-width: 550px){
     img {
@@ -37,7 +43,6 @@
 }
 body {
     max-width: 1000px;
-    /* justify-content: center; */
     margin-left: auto;
     margin-right: auto;
     margin-top: 0px;
@@ -47,13 +52,10 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    /* background-size: 100%; */
-    
 }
 
 header {
     max-width: 1000px;
-    /* justify-content: center; */
     margin-left: auto;
     margin-right: auto;
     margin-top: 0px;
@@ -76,19 +78,21 @@ header h2 {
     font-size: 50px;
     font-family: "DKlemon";
 }
+
+h2 {
+    color: #ed9e2f;
+    font-size: 50px;
+    font-family: "DKlemon";
+    text-align: center;
+}
+
 .imgProduit {
-    
     max-height: 300px;
-    /* max-width: 450px; */
     border-radius: 5px;
-    
-    margin: auto 20px auto 0px;
     display: flex;
-    /* padding-right: 20px; */
     transition: all 0.3s;
     cursor: pointer;
 }
-
 
 .mainSection {
     margin-top: 175px;
@@ -107,18 +111,13 @@ header h2 {
 
 .imgProduit:hover {
     transform: scale(1.05);
-
-    
 }
-
 
 .produit{
     background-color:#F3E9F1;
     border-radius: 5px;
     display: flex;
     flex-direction: row;
-    
-    
     transition: all 1s;
     margin: 75px 20px 75px 20px;
     padding: 20px 20px 20px 20px;
@@ -131,6 +130,7 @@ header h2 {
 .produit_contenu {
     display: flex;
     flex-direction: column;
+    margin-left: 20px;
 }
 
 .titreProduit {
@@ -161,7 +161,6 @@ header a {
 }
 
 #panier_button {
-    
     max-width: 70px;
     min-height: 35px;
     text-align: center;
@@ -172,7 +171,6 @@ header a {
     border-radius: 2px;
     margin-right: 25px;
     font-family: "DKLemon";
-    
 }
 
 .prixCommanderSection {
@@ -192,11 +190,8 @@ header a {
     border-radius: 5px;
     margin-top: 40px;
     margin-right: 20px;
-    /* margin: 0 15px 15px 50px; */
     color:blanchedalmond;
     font-size: 30px;
-    
     padding: 10px 15px 10px 15px;
-    
     font-family: "Roboto_Bold";
 } 

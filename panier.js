@@ -1,10 +1,12 @@
-////////// Rajout des produits sur la page panier /////////// 
+////////// Boutton retour au menu ///////////
+retourMenu.addEventListener("click", function() {
+    window.location = "file:///C:/A_DOCS/OPENCLASSROOMS/PROJET/Projet5-js/work/index.html";
+});
 
-// try {
+////////// Rajout des produits sur la page panier /////////// 
     let elementsPanier ;
     elementsPanier = document.querySelector('#elementPanier');
-    
-    
+
     let panierALL;
      panierALL = JSON.parse(sessionStorage.getItem("alixOcrP5"));
      let sumPrice = 0;
@@ -65,35 +67,73 @@
 
      };
 
-     ////////// Total du prix des produits du panier /////////// 
-     let totalPrice = document.createElement("div");
-     totalPrice.className = "totalPrice";
-     totalPrice.innerHTML = "Total : " + sumPrice + " €";
-     elementsPanier.appendChild(totalPrice);
+////////// Total du prix des produits du panier /////////// 
+let totalPrice = document.createElement("div");
+totalPrice.className = "totalPrice";
+totalPrice.innerHTML = "Total : " + sumPrice + " €";
+elementsPanier.appendChild(totalPrice);
 
-     sessionStorage.setItem("totalPrice", JSON.stringify(totalPrice.innerHTML));
+sessionStorage.setItem("totalPrice", JSON.stringify(totalPrice.innerHTML));
 
 ////////// compteur du bouton panier /////////// 
+const panier_countElt = document.querySelector("#panier-count");
+const panier_button = document.querySelector("#panier_button");
+let panierCount = sessionStorage.getItem("alixOcrP5");
+if(!panierCount){
+    panierCount = 0;
 
-
-    const panier_countElt = document.querySelector("#panier-count");
-    const panier_button = document.querySelector("#panier_button");
-    let panierCount = sessionStorage.getItem("alixOcrP5");
-    if(!panierCount){
-        panierCount = 0;
-
-    }else{
-        panierCount = JSON.parse(panierCount).length;
-    }
-    panier_countElt.innerHTML = panierCount;
+}else{
+    panierCount = JSON.parse(panierCount).length;
+}
+panier_countElt.innerHTML = panierCount;
 
 
 
 ////////// finaliser commande en envoyant vers la page de formulaire /////////// 
-let finishCommand = document.querySelector(".fnaliser_button");
+let idCommand = 0;
+
+let idGenerator = function (){
+    let id = Math.floor(Math.random() * 1000000)
+    console.log(id);
+    return id
+    
+}
+
+let formContent = [];
+let finishCommand = document.querySelector(".finaliser_button");
+
 finishCommand.addEventListener("click", function () {
-    sessionStorage.setItem("alixOcrP5", JSON.stringify(panierALL))
-    window.location = "file:///C:/A_DOCS/OPENCLASSROOMS/PROJET/Projet5-js/work/formulaire.html";
+
+    let idCommand = idGenerator(); 
+    sessionStorage.setItem("idCommand", JSON.stringify(idCommand));
+
+    let nomFormulaire = document.querySelector("#name").value;
+    let prenomFormulaire = document.querySelector("#surname").value;
+    let emailFormulaire = document.querySelector("#mail").value;
+    let adressFormulaire = document.querySelector("#adress").value;
+    let townFormulaire = document.querySelector("#town").value;
+
+    const order = {
+        nomFormulaire : nomFormulaire,
+        prenomFormulaire : prenomFormulaire,
+        emailFormulaire : emailFormulaire,
+        adressFormulaire : adressFormulaire,
+        townFormulaire : townFormulaire,
+        idCommand : idCommand,
+        sumPrice : sumPrice
+
+    }
+
+    formContent.push(nomFormulaire + " " + prenomFormulaire + " " + emailFormulaire + " "+ adressFormulaire + " "+ townFormulaire + " ");
+    sessionStorage.setItem("formContent", JSON.stringify(formContent));
+
+    // window.location = "file:///C:/A_DOCS/OPENCLASSROOMS/PROJET/Projet5-js/work/confirmation.html";
+
+    var request = new XMLHttpRequest();
+    request.open("POST", "http://localhost:3000/api/cameras/order");
+    request.setRequestHeader("Content-Type", "application/json");
+    request.send(JSON.stringify(order));
+    console.log(order)
 });
 
 

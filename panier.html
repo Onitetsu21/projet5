@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>OriPhoto</title>
     <!-- <link rel="stylesheet" href="style.css"> -->
-    <link rel="stylesheet" href="styleProduit.css">
+    <link rel="stylesheet" href="stylePage.css">
 </head>
 <body>
 
@@ -17,12 +17,45 @@
 
     <section class="mainSection">
         
-        
+        <div id="retourMenu">Retourner aux produits</div>
         <div class="panier">
+            <h2>Votre panier</h2>
             <div id="elementPanier"></div>
-            <div class="commander_button fnaliser_button"> 
+            <div id="formulaire">
+                <form action="" method="POST">
+                    <div class="form_item">
+                        <label for="name"> Nom :</label>
+                        <input type="text" id="name" name="buyer_name" placeholder="exemple : Dupont" required >
+                    </div>
+                    <div class="form_item">
+                        <label for="surname"> Prénom :</label>
+                        <input type="text" id="surname" name="buyer_surname" placeholder="exemple : Jean" required >
+                    </div>
+                    <div class="form_item">
+                        <label for="mail">E-mail :</label>
+                        <input type="email" id="mail" name="buyer_mail" placeholder="exemple : blabla@mail.com" required  >
+                        <div id="validMail"></div>
+                    </div>
+                    <div class="form_item">
+                        <label for="mail">Adresse :</label>
+                        <input type="text" id="adress" name="buyer_mail"placeholder="1 rue machin chose" required >
+                    </div>
+                    <div class="form_item">
+                        <label for="mail">Ville :</label>
+                        <input type="text" id="town" name="buyer_mail"placeholder="Realtown" required >
+                    </div>
+                    
+                    <div class="totalPrice_form"></div>
+                    <div class="finaliser_button">Finaliser la commande !</div>
+                    <!-- <input class="finaliser_button" type="submit" placeholder="Finaliser la commande" value="Finaliser la commande !">  -->
+                </form>
+                
+                <!-- <a href="#">FINALISER LA COMMANDE</a> -->
+                <!-- </div> -->
+            </div>
+            <!-- <div class="commander_button finaliser_button"> 
                 <a href="#">FINALISER LA COMMANDE</a>
-            </div> 
+            </div>  -->
         </div>
 
      
