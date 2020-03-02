@@ -1,20 +1,21 @@
 /* MediaQuery */
 
 @media all and (max-width: 891px) {
-    .produit {
+    .product {
         display: flex;
         flex-wrap: wrap;
         margin: auto;    
     }
-    #prixProduit {
-        font-size: 25px;
-    }
+    
     .col-left {
         margin: auto;
         padding-left: 0px;
         padding-top: 20px ;
     }
     .col-left > img {
+        margin: auto;
+    }
+    .col-right {
         margin: auto;
     }
 }
@@ -110,7 +111,7 @@ header {
     z-index: 9999999;
     position: fixed;
 }
-#panier_button {
+#basket_button {
     max-width: 70px;
     height: 35px;
     text-align: center;
@@ -132,7 +133,7 @@ header h2 {
 
 /* Page Index */
 
-.titreSection {
+.titleSection {
     max-width: 500px;
     height: 100%;
     margin: auto;
@@ -143,9 +144,9 @@ header h2 {
     font-family: "DKLemon";
 }
 
-/* Détails Produit */
+/* Détails product */
 
-#retourMenu {
+#backToMenu {
     background-color: #F3E9F1;
     border-radius: 5px;
     width: 100px;
@@ -159,7 +160,7 @@ header h2 {
     cursor: pointer;
 }
 
-.produit{
+.product{
     background-color: #F3E9F1;
     border-radius: 5px;
     display: flex;
@@ -179,7 +180,7 @@ header h2 {
 }
 
 .col-left > img {
-    max-height: 250px;
+    max-height: 300px;
     /* margin-top: 20px ; */
     border-radius: 5px;
     transition: all 0.3s;
@@ -198,18 +199,18 @@ header h2 {
     padding: 30px 30px 30px 30px;
 }
 
-#titreProduit {
+#titleProduct {
     font-family: "Roboto-Bold";
 }
 
-#resumeProduit {
+#resumeProduct {
     font-family: "roboto-Thin";
 }
 
-#prixProduit {
+#priceProduct {
     font-family: "Roboto-Medium";
-    margin-right: 25px;
-    font-size: 35px;
+    /* margin-right: 25px; */
+    font-size: 25px;
 }
 
 .commandAndPrice {
@@ -221,12 +222,12 @@ header h2 {
 
 .commander_button {
     text-align: center;
-    right: 15px;
+    /* right: 15px; */
     cursor: pointer;
     background: linear-gradient(45deg, #ed9e2f 0%,#b27de8 100%);
     border: 0px;
     border-radius: 5px;
-    margin: 15px 15px 15px 15px;
+    /* margin: 15px 15px 15px 15px; */
     color:blanchedalmond;
     font-size: 25px;
     padding: 10px 15px 10px 15px;
@@ -237,9 +238,9 @@ header h2 {
     background: linear-gradient(45deg, #b27de8 0%,#ed9e2f 100%);
 }
 
-/* Page Panier */
+/* Page basket */
 
-.panier {
+.basket {
     background-color: #F3E9F1;
     border-radius: 20px;
     display: flex;
@@ -248,7 +249,7 @@ header h2 {
     transition: all 1s;
 }
 
-.finaliser_button {
+.finish_button {
     max-height: 100%;
     text-align: center;
     cursor: pointer;
@@ -265,16 +266,16 @@ header h2 {
     margin: 10px 10px 10px 10px;
 }
 
-#elementPanier {
+#elementBasket {
     display: flex;
     flex-direction: column; 
 }
 
-.imgProduit_panier {
+.imgProduct_basket {
     max-height: 35px;
 }
 
-.panier_produit {
+.basket_product {
     align-items: center;
     background-color: #ed9e2f;
     color: #F3E9F1;
@@ -286,7 +287,7 @@ header h2 {
     border-radius: 5px;
 }
 
-.removeProduit_button {
+.removeProduct_button {
     max-width: 15px;
     max-height: 15px;
     cursor: pointer;
@@ -298,7 +299,7 @@ header h2 {
     margin: auto;
     padding: 15px 15px 15px 15px;
     border-radius: 5px;
-
+    max-width: 110px;
 }
 
 #formulaire {
@@ -326,7 +327,7 @@ header h2 {
     display: flex;
     border-radius: 5px;
     max-width: 500px;
-    max-height: 100px;
+    /* max-height: 100px; */
     margin: auto;
 }
 .confirmCommand_msg{

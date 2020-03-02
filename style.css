@@ -1,20 +1,25 @@
 @media all and (max-width: 944px) {
-    .produit {
+    .product {
         display: flex;
         flex-wrap: wrap;
         margin: auto; 
     }
-    #prixProduit {
-        font-size: 25px;
+    #priceProduct {
+        font-size: 20px;
     }
     .col-left {
         margin: auto;
         padding-left: 15px;
         padding-top: 20px ;
     }
-    .imgProduit {
+    .imgProduct {
         margin: auto;
     }
+    .product_contenu {
+        margin: auto;
+        padding-left: 0px;
+    }
+
 }
 
 
@@ -86,7 +91,7 @@ h2 {
     text-align: center;
 }
 
-.imgProduit {
+.imgProduct {
     max-height: 300px;
     border-radius: 5px;
     display: flex;
@@ -98,7 +103,7 @@ h2 {
     margin-top: 175px;
 }
 
-.titreSection {
+.titleSection {
     max-width: 500px;
     height: 100%;
     margin: auto;
@@ -109,11 +114,11 @@ h2 {
     font-family: "DKLemon";
 }
 
-.imgProduit:hover {
+.imgProduct:hover {
     transform: scale(1.05);
 }
 
-.produit{
+.product{
     background-color:#F3E9F1;
     border-radius: 5px;
     display: flex;
@@ -123,25 +128,26 @@ h2 {
     padding: 20px 20px 20px 20px;
 }
 
-.produit:hover {
+.product:hover {
     box-shadow: 2px 2px 10px 1px #F3E9F1;
 }
 
-.produit_contenu {
+.product_contenu {
     display: flex;
     flex-direction: column;
-    margin-left: 20px;
+    padding-left: 20px;
+    
 }
 
-.titreProduit {
+.titleProduct {
     font-family: "Roboto-Bold";
 }
-.resumeProduit {
+.resumeProduct {
     font-family: "roboto-Thin";
 }
-.prixProduit {
+.priceProduct {
     font-family: "Roboto-Medium";
-    font-size: 35px;
+    font-size: 25px;
 }
 
 a {
@@ -160,7 +166,7 @@ header a {
     color: #F3E9F1;
 }
 
-#panier_button {
+#basket_button {
     max-width: 70px;
     min-height: 35px;
     text-align: center;
@@ -173,23 +179,23 @@ header a {
     font-family: "DKLemon";
 }
 
-.prixCommanderSection {
+.priceCommanderSection {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 }
 
 .commander_button {
     max-width: 250px;
     height: 35px;
     text-align: center;
-    right: 15px;
+    /* right: 15px; */
     cursor: pointer;
     background: linear-gradient(45deg, #ed9e2f 0%,#b27de8 100%);
     border: 0px;
     border-radius: 5px;
-    margin-top: 40px;
-    margin-right: 20px;
+    /* margin: auto; */
     color:blanchedalmond;
     font-size: 30px;
     padding: 10px 15px 10px 15px;

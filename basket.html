@@ -12,23 +12,23 @@
 
     <header>
         <h2 class="nomSite"><a href="index.html">OriPhoto</a></h2>
-        <button id="panier_button">Panier <span id="panier-count">0</span></button>
+        <button id="basket_button">Panier <span id="basket-count">0</span></button>
     </header>
 
     <section class="mainSection">
         
-        <div id="retourMenu">Retourner aux produits</div>
-        <div class="panier">
-            <h2>Votre panier</h2>
-            <div id="elementPanier"></div>
+        <div id="backToMenu">Retourner aux produits</div>
+        <div class="basket">
+            <h2>Votre Panier</h2>
+            <div id="elementsBasket"></div>
             <div id="formulaire">
                 <form action="" method="POST">
                     <div class="form_item">
-                        <label for="name"> Nom :</label>
+                        <label for="name">Nom :</label>
                         <input type="text" id="name" name="buyer_name" placeholder="exemple : Dupont" required >
                     </div>
                     <div class="form_item">
-                        <label for="surname"> Prénom :</label>
+                        <label for="surname">Prénom :</label>
                         <input type="text" id="surname" name="buyer_surname" placeholder="exemple : Jean" required >
                     </div>
                     <div class="form_item">
@@ -37,25 +37,23 @@
                         <div id="validMail"></div>
                     </div>
                     <div class="form_item">
-                        <label for="mail">Adresse :</label>
-                        <input type="text" id="adress" name="buyer_mail"placeholder="1 rue machin chose" required >
+                        <label for="adress">Adresse :</label>
+                        <input type="text" id="adress" name="buyer_adress"placeholder="1 rue machin chose" required >
                     </div>
                     <div class="form_item">
-                        <label for="mail">Ville :</label>
-                        <input type="text" id="town" name="buyer_mail"placeholder="Realtown" required >
+                        <label for="town">Ville :</label>
+                        <input type="text" id="town" name="buyer_town"placeholder="Realtown" required >
                     </div>
                     
                     <div class="totalPrice_form"></div>
-                    <div class="finaliser_button">Finaliser la commande !</div>
-                    <!-- <input class="finaliser_button" type="submit" placeholder="Finaliser la commande" value="Finaliser la commande !">  -->
+                    
+                    <div class="finish_button">Finaliser la commande !</div>
+                    <input class="finish_button" type="submit" placeholder="Finaliser la commande" value="Finaliser la commande !"> 
                 </form>
                 
-                <!-- <a href="#">FINALISER LA COMMANDE</a> -->
-                <!-- </div> -->
+                
             </div>
-            <!-- <div class="commander_button finaliser_button"> 
-                <a href="#">FINALISER LA COMMANDE</a>
-            </div>  -->
+            
         </div>
 
      
@@ -63,7 +61,7 @@
 
     <footer></footer>
     
-    <script type="text/javascript" src="panier.js"></script>
+    <script type="text/javascript" src="basket.js"></script>
     
 </body>
 </html>

@@ -1,44 +1,44 @@
 const request = new XMLHttpRequest();
 
-let panier = [];
+let basket = [];
 
-///////// Fonction création de produit /////////
+///////// Fonction création de product /////////
 
 function createProduct (product){
 
     const productContainer = document.createElement("div");
-    productContainer.className = "produit";
+    productContainer.className = "product";
 
         const img = document.createElement("img");
         img.src = product.imageUrl;
-        img.alt = "Image du produit";
-        img.className = "imgProduit";
+        img.alt = "Image du product";
+        img.className = "imgProduct";
         img.addEventListener('click', function () {
-            sessionStorage.setItem("detailProduit", JSON.stringify(product));
-            window.location = "file:///C:/A_DOCS/OPENCLASSROOMS/PROJET/Projet5-js/work/detailProduit.html";
+            sessionStorage.setItem("detailProduct", JSON.stringify(product));
+            window.location = "file:///C:/A_DOCS/OPENCLASSROOMS/PROJET/Projet5-js/work/detailproduct.html";
         })
         productContainer.appendChild(img);
 
-        const produitContenu = document.createElement("div");
-        produitContenu.className = "produit_contenu";
-        productContainer.appendChild(produitContenu);
+        const productContenu = document.createElement("div");
+        productContenu.className = "product_contenu";
+        productContainer.appendChild(productContenu);
 
             const productTitle = document.createElement("h2");
-            productTitle.className = "titreProduit";
-            produitContenu.appendChild(productTitle);
+            productTitle.className = "titleProduct";
+            productContenu.appendChild(productTitle);
             productTitle.innerHTML = product.name;
 
             const descriptionProduct = document.createElement("p");
-            descriptionProduct.className = "resumeProduit";
-            produitContenu.appendChild(descriptionProduct);
+            descriptionProduct.className = "resumeProduct";
+            productContenu.appendChild(descriptionProduct);
             descriptionProduct.innerHTML = product.description;
 
             const priceAndCommandSection = document.createElement("div");
-            priceAndCommandSection.className = "prixCommanderSection"
-            produitContenu.appendChild(priceAndCommandSection);
+            priceAndCommandSection.className = "priceCommanderSection"
+            productContenu.appendChild(priceAndCommandSection);
 
                 const price = document.createElement("h4");
-                price.className = "prixProduit";
+                price.className = "priceProduct";
                 priceAndCommandSection.appendChild(price);
                 price.innerHTML = product.price + " €";
 
@@ -49,31 +49,31 @@ function createProduct (product){
 
                 
                 commandButton.addEventListener('click', function () {
-                    sessionStorage.setItem("detailProduit", JSON.stringify(product));
-                    window.location = "file:///C:/A_DOCS/OPENCLASSROOMS/PROJET/Projet5-js/work/detailProduit.html";
+                    sessionStorage.setItem("detailProduct", JSON.stringify(product));
+                    window.location = "file:///C:/A_DOCS/OPENCLASSROOMS/PROJET/Projet5-js/work/detailproduct.html";
                 });
 
     
-        document.querySelector("#produitListe").appendChild(productContainer); 
+        document.querySelector("#productList").appendChild(productContainer); 
      
 };
 
-////////// compteur du bouton panier /////////// 
-const panier_countElt = document.querySelector("#panier-count")
-const panier_button = document.querySelector("#panier_button")
-panier_button.addEventListener('click', function (){
+////////// compteur du bouton basket /////////// 
+const basket_countElt = document.querySelector("#basket-count")
+const basket_button = document.querySelector("#basket_button")
+basket_button.addEventListener('click', function (){
     
-    window.location = "file:///C:/A_DOCS/OPENCLASSROOMS/PROJET/Projet5-js/work/panier.html";
+    window.location = "file:///C:/A_DOCS/OPENCLASSROOMS/PROJET/Projet5-js/work/basket.html";
 });
 
-let panierCount = sessionStorage.getItem("alixOcrP5");
-if(!panierCount){
-    panierCount = 0;
+let basketCount = sessionStorage.getItem("alixOcrP5");
+if(!basketCount){
+    basketCount = 0;
 
 }else{
-    panierCount = JSON.parse(panierCount).length;
+    basketCount = JSON.parse(basketCount).length;
 }
-panier_countElt.innerHTML = panierCount;
+basket_countElt.innerHTML = basketCount;
 
 
 /////////// Requête serveur ///////////
