@@ -1,7 +1,11 @@
 ////////// Boutton backTo au menu ///////////
-backToMenu.addEventListener("click", function() {
-    window.location = "file:///C:/A_DOCS/OPENCLASSROOMS/PROJET/Projet5-js/work/index.html";
-});
+let backToMenu = function(e){
+    e.addEventListener("click", function() {
+        window.location = "file:///C:/A_DOCS/OPENCLASSROOMS/PROJET/Projet5-js/work/index.html";
+    });
+}
+backToMenu_Button = document.querySelector("#backToMenu")
+backToMenu(backToMenu_Button);
 
 ////////// Rajout des products sur la page basket /////////// 
     let elementsBasket ;
@@ -78,15 +82,27 @@ sessionStorage.setItem("totalPrice", JSON.stringify(totalPrice.innerHTML));
 ////////// compteur du bouton basket /////////// 
 const basket_countElt = document.querySelector("#basket-count");
 const basket_button = document.querySelector("#basket_button");
-let basketCount = sessionStorage.getItem("alixOcrP5");
-if(!basketCount){
-    basketCount = 0;
+let basket = sessionStorage.getItem("alixOcrP5");
+// if(!basketCount){
+//     basketCount = 0;
 
-}else{
-    basketCount = JSON.parse(basketCount).length;
-}
-basket_countElt.innerHTML = basketCount;
+// }else{
+//     basketCount = JSON.parse(basketCount).length;
+// }
+// basket_countElt.innerHTML = basketCount;
 
+let basketCount = function (e) {
+    let products = e;
+    let count;
+    if(!products) {
+        count = 0;
+    }else {
+        count = JSON.parse(products).length;
+    }
+
+    basket_countElt.innerHTML = count;
+} 
+basketCount(basket);
 
 
 ////////// finaliser commande en envoyant vers la page de formulaire /////////// 
@@ -96,7 +112,6 @@ let idGenerator = function (){
     let id = Math.floor(Math.random() * 1000000)
     console.log(id);
     return id
-    
 }
 
 let formContent = [];

@@ -1,6 +1,5 @@
 const request = new XMLHttpRequest();
 
-let basket = [];
 
 ///////// Fonction création de product /////////
 
@@ -66,14 +65,27 @@ basket_button.addEventListener('click', function (){
     window.location = "file:///C:/A_DOCS/OPENCLASSROOMS/PROJET/Projet5-js/work/basket.html";
 });
 
-let basketCount = sessionStorage.getItem("alixOcrP5");
-if(!basketCount){
-    basketCount = 0;
+// let basketCount = sessionStorage.getItem("alixOcrP5");
+// if(!basketCount){
+//     basketCount = 0;
 
-}else{
-    basketCount = JSON.parse(basketCount).length;
-}
-basket_countElt.innerHTML = basketCount;
+// }else{
+//     basketCount = JSON.parse(basketCount).length;
+// }
+// basket_countElt.innerHTML = basketCount;
+let basket = sessionStorage.getItem("alixOcrP5");
+let basketCount = function (e) {
+    let products = e;
+    let count;
+    if(!products) {
+        count = 0;
+    }else {
+        count = JSON.parse(products).length;
+    }
+
+    basket_countElt.innerHTML = count;
+} 
+basketCount(basket);
 
 
 /////////// Requête serveur ///////////
