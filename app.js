@@ -1,9 +1,9 @@
-const request = new XMLHttpRequest();
+
 
 
 ///////// Fonction création de product /////////
 
-function createProduct (product){
+function createProduct(product){
 
     const productContainer = document.createElement("div");
     productContainer.className = "product";
@@ -58,6 +58,7 @@ function createProduct (product){
 };
 
 ////////// compteur du bouton basket /////////// 
+
 const basket_countElt = document.querySelector("#basket-count")
 const basket_button = document.querySelector("#basket_button")
 basket_button.addEventListener('click', function (){
@@ -65,17 +66,9 @@ basket_button.addEventListener('click', function (){
     window.location = "file:///C:/A_DOCS/OPENCLASSROOMS/PROJET/Projet5-js/work/basket.html";
 });
 
-// let basketCount = sessionStorage.getItem("alixOcrP5");
-// if(!basketCount){
-//     basketCount = 0;
-
-// }else{
-//     basketCount = JSON.parse(basketCount).length;
-// }
-// basket_countElt.innerHTML = basketCount;
 let basket = sessionStorage.getItem("alixOcrP5");
-let basketCount = function (e) {
-    let products = e;
+function basketCount(productNumber) {
+    let products = productNumber;
     let count;
     if(!products) {
         count = 0;
@@ -88,17 +81,20 @@ let basketCount = function (e) {
 basketCount(basket);
 
 
-/////////// Requête serveur ///////////
-request.onreadystatechange = function () {
+/////////// Requête serveur + création des produits ///////////
+const request = new XMLHttpRequest();
+request.open("GET", "http://localhost:3000/api/cameras");
+request.send();
+request.addEventListener("readystatechange", function () {
     
     if (this.readyState == XMLHttpRequest.DONE && this.status == 200) {
         let response = JSON.parse(this.responseText);
 
         for(let i = 0; i < response.length; i++) {
                 createProduct(response[i]);
+                
         }              
     }
-}
+});
 
-request.open("GET", "http://localhost:3000/api/cameras");
-request.send();
+

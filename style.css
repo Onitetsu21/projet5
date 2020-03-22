@@ -1,3 +1,4 @@
+/* MediaQuery */
 @media all and (max-width: 944px) {
     .product {
         display: flex;
@@ -22,8 +23,7 @@
 
 }
 
-
-
+/* Polices */
 @media all and (max-width: 550px){
     img {
         width: 400px;
@@ -77,7 +77,6 @@ header {
 
 
 header h2 {
-    /* margin: auto; */
     padding-left: 25px;
     color: #F3E9F1;
     font-size: 50px;
@@ -190,12 +189,10 @@ header a {
     max-width: 250px;
     height: 35px;
     text-align: center;
-    /* right: 15px; */
     cursor: pointer;
     background: linear-gradient(45deg, #ed9e2f 0%,#b27de8 100%);
     border: 0px;
     border-radius: 5px;
-    /* margin: auto; */
     color:blanchedalmond;
     font-size: 30px;
     padding: 10px 15px 10px 15px;
