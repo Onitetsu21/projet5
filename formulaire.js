@@ -4,14 +4,6 @@ let formulaire = document.querySelector("#formulaire");
 
 let formContent = [];
 
-
-// let nomFormulaire = document.querySelector("#name").value;
-// let prenomFormulaire = document.querySelector("#surname").value;
-// let emailFormulaire = document.querySelector("#email").value;
-// let telFormulaire = document.querySelector("#tel").value;
-
-
-
 let panier = JSON.parse(sessionStorage.getItem("alixOcrP5"));
 let produitPanier = [];
 for(let i = 0; i < panier.length; i++) {
@@ -52,13 +44,6 @@ finishCommand.addEventListener("click", function () {
 let totalPrice = JSON.parse(sessionStorage.getItem("totalPrice"));
 let totalPriceForm = document.querySelector(".totalPrice_form");
 totalPriceForm.innerHTML = totalPrice;
-// let total = document.createElement("div");
-//     total.className = "totalPrice";
-//     total.innerHTML = totalPrice;
-//     formulaire.appendChild(total);
-
-
-
 
     ////////// compteur du bouton panier /////////// 
 

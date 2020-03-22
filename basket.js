@@ -67,7 +67,7 @@ function createBasketProducts(products_basket){
 
             ////////// Enlever un product du basket /////////// 
             let removeProduct = document.createElement("img");
-            removeProduct.src = "C:/A_DOCS/OPENCLASSROOMS/PROJET/Projet5-js/work/images/croix.png"
+            removeProduct.src = "/images/croix.png"
             removeProduct.className = "removeProduct_button";
             basket_product.appendChild(removeProduct);
             removeProduct.addEventListener('click', function () {
