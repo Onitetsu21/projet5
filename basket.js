@@ -24,8 +24,6 @@ backToMenu(backToMenu_Button);
 
 ////////// Rajout des produits sur la page basket /////////// 
 
-
-
 function createBasketProducts(products_basket){
     for(let i = 0; i < products_basket.length; i++){
         
@@ -66,8 +64,9 @@ function createBasketProducts(products_basket){
             sessionStorage.setItem('sumPrice', JSON.stringify(sumPrice));
 
             ////////// Enlever un product du basket /////////// 
+
             let removeProduct = document.createElement("img");
-            removeProduct.src = "/images/croix.png"
+            removeProduct.src = "images/croix.png"
             removeProduct.className = "removeProduct_button";
             basket_product.appendChild(removeProduct);
             removeProduct.addEventListener('click', function () {
