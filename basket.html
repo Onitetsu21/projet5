@@ -21,7 +21,7 @@
             <h2>Votre Panier</h2>
             <div id="elementsBasket"></div>
             <div id="formulaire">
-                <form action="" method="POST" id="form">
+                <form id="form">
                     <div class="form_item">
                         <label for="name">Nom :</label>
                         <input type="text" id="name" name="buyer_name" placeholder="exemple : Dupont" required >
@@ -37,17 +37,17 @@
                     </div>
                     <div class="form_item">
                         <label for="adress">Adresse :</label>
-                        <input type="text" id="adress" name="buyer_adress"placeholder="1 rue machin chose" required >
+                        <input type="text" id="adress" name="buyer_adress" placeholder="1 rue machin chose" required >
                     </div>
                     <div class="form_item">
                         <label for="town">Ville :</label>
-                        <input type="text" id="town" name="buyer_town"placeholder="Realtown" required >
+                        <input type="text" id="town" name="buyer_town" placeholder="Realtown" required >
                     </div>
                     
                     <div class="totalPrice_form"></div>
                     
                     <div id="finish">
-                        <input class="finish_button" type="submit" placeholder="Finaliser la commande" value="Finaliser la commande !">
+                        <input class="finish_button" type="submit" value="Finaliser la commande !">
                     </div>
                     <!-- <div class="finish_button">Finaliser la commande !</div> -->
                      
@@ -59,7 +59,7 @@
 
     <footer></footer>
     
-    <script type="text/javascript" src="basket.js"></script>
+    <script src="basket.js"></script>
     
 </body>
 </html>
