@@ -51,8 +51,7 @@ function createBasketProducts(products_basket){
                 }else{
                     selectLens.innerHTML = products_basket[i].selectedLens;
                 }
-                    
-                    
+                          
             let priceproduct_basket = document.createElement("div");
             priceproduct_basket.className = "priceProduct_basket"
             priceproduct_basket.innerHTML = products_basket[i].price + " €";
@@ -93,10 +92,7 @@ function createBasketProducts(products_basket){
 }
 createBasketProducts(basketALL);
 
-     
-
 ////////// Total du prix des products du basket /////////// 
-
 
 function totalPriceFunction(){
         let totalPrice = document.createElement("div");
@@ -113,12 +109,10 @@ const basket_countElt = document.querySelector("#basket-count");
 const basket_button = document.querySelector("#basket_button");
 let basket = JSON.parse(sessionStorage.getItem("alixOcrP5"));
 
-
 function basketCount() {
     basket_countElt.innerHTML = count;
 } 
 basketCount(basket);
-
 
 ////////// finaliser commande en envoyant vers la page de formulaire /////////// 
 let idCommand = 0;
@@ -131,14 +125,13 @@ function idGenerator(idLength){
     return output
 }
 
-
 const form = document.querySelector("#form");
 
 form.addEventListener("submit", function (e) {
+    
     e.preventDefault();
     let idCommand = idGenerator(10); 
     sessionStorage.setItem("idCommand", JSON.stringify(idCommand));
-
     let nameFormulaire = document.querySelector("#name").value.trim();
     let surnameFormulaire = document.querySelector("#surname").value.trim();
     let emailFormulaire = document.querySelector("#mail").value.trim();
@@ -156,14 +149,11 @@ form.addEventListener("submit", function (e) {
         products: basket
     }
 
-    
-
-  
     const request = new XMLHttpRequest();
     request.open("POST", "http://localhost:3000/api/cameras/order");
     request.setRequestHeader("Content-Type", "application/json");
     request.send(JSON.stringify(order));
-   
+    
     request.addEventListener("load", function(f){
         console.log("load ok")
     window.location = "confirmation.html";
@@ -171,11 +161,9 @@ form.addEventListener("submit", function (e) {
     request.addEventListener("error", function(error){
     console.log(error)
     })
-    
-    
-    
-    
 });
+
+
 
 
 
