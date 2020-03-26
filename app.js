@@ -13,7 +13,7 @@ function createProduct(product){
         img.alt = "Image du product";
         img.className = "imgProduct";
         img.addEventListener('click', function () {
-            sessionStorage.setItem("detailProduct", JSON.stringify(product));
+            localStorage.setItem("detailProduct", JSON.stringify(product));
             window.location = "detailproduct.html";
         })
         productContainer.appendChild(img);
@@ -48,7 +48,7 @@ function createProduct(product){
 
                 
                 commandButton.addEventListener('click', function () {
-                    sessionStorage.setItem("detailProduct", JSON.stringify(product));
+                    localStorage.setItem("detailProduct", JSON.stringify(product));
                     window.location = "detailproduct.html";
                 });
 
@@ -66,7 +66,7 @@ basket_button.addEventListener('click', function (){
     window.location = "basket.html";
 });
 
-let basket = sessionStorage.getItem("alixOcrP5");
+let basket = localStorage.getItem("alixOcrP5");
 function basketCount(productNumber) {
     let products = productNumber;
     let count;

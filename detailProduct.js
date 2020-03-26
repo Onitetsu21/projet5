@@ -10,7 +10,7 @@ backToMenu(backToMenu_Button);
 
 ////////// création du produit ///////////
 
-const productSelected = JSON.parse(sessionStorage.getItem("detailProduct"));
+const productSelected = JSON.parse(localStorage.getItem("detailProduct"));
 
 function createInfoProduct(product){
     
@@ -44,11 +44,11 @@ const basket_countElt = document.querySelector("#basket-count");
 const basket_button = document.querySelector("#basket_button");
 
 function basketCount() {
-    let basket = JSON.parse(sessionStorage.getItem("alixOcrP5"));
+    let basket = JSON.parse(localStorage.getItem("alixOcrP5"));
     basket_countElt.innerHTML = basket.length;
 } 
 
-if(!JSON.parse(sessionStorage.getItem("alixOcrP5"))){
+if(!JSON.parse(localStorage.getItem("alixOcrP5"))){
 
 }else{
     basketCount();
@@ -61,7 +61,7 @@ basket_button.addEventListener('click', function (){
 ////////// Boutton commander ///////////
 
 commandButton.addEventListener('click', function () {
-    let basketStored = sessionStorage.getItem("alixOcrP5");
+    let basketStored = localStorage.getItem("alixOcrP5");
     if(!basketStored){
         basketStored = [];
     }else{
@@ -70,7 +70,7 @@ commandButton.addEventListener('click', function () {
     }  
     basketStored.push(productSelected);
     
-    sessionStorage.setItem('alixOcrP5', JSON.stringify(basketStored));
+    localStorage.setItem('alixOcrP5', JSON.stringify(basketStored));
     basketCount();
 });
 

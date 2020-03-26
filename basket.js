@@ -5,12 +5,12 @@ let elementsBasket ;
 elementsBasket = document.querySelector('#elementsBasket');
 
 let basketALL;
-basketALL = JSON.parse(sessionStorage.getItem("alixOcrP5"));
+basketALL = JSON.parse(localStorage.getItem("alixOcrP5"));
 
 let count = 0
 
 let sumPrice = 0;
-sessionStorage.setItem('sumPrice', JSON.stringify(sumPrice));
+localStorage.setItem('sumPrice', JSON.stringify(sumPrice));
     
 ////////// Boutton backTo au menu ///////////
 
@@ -60,7 +60,7 @@ function createBasketProducts(products_basket){
             sumPrice += products_basket[i].price;
             count += 1;
             
-            sessionStorage.setItem('sumPrice', JSON.stringify(sumPrice));
+            localStorage.setItem('sumPrice', JSON.stringify(sumPrice));
 
             ////////// Enlever un product du basket /////////// 
 
@@ -72,10 +72,10 @@ function createBasketProducts(products_basket){
 
                 sumPrice = 0;
                 count = 0;
-                sessionStorage.setItem('sumPrice', JSON.stringify(sumPrice));
+                localStorage.setItem('sumPrice', JSON.stringify(sumPrice));
                 
                 products_basket.splice(i, 1);
-                sessionStorage.setItem('alixOcrP5', JSON.stringify(products_basket));
+                localStorage.setItem('alixOcrP5', JSON.stringify(products_basket));
                 
                 for(let j = 0; j < products_basket.length + 1; j++){
                 let basket_product_select = document.querySelector(".basket_product")   
@@ -97,7 +97,7 @@ createBasketProducts(basketALL);
 function totalPriceFunction(){
         let totalPrice = document.createElement("div");
         totalPrice.className = "totalPrice";
-        totalPrice.innerHTML = "Total : " + JSON.parse(sessionStorage.getItem("sumPrice")) + " €";
+        totalPrice.innerHTML = "Total : " + JSON.parse(localStorage.getItem("sumPrice")) + " €";
         elementsBasket.appendChild(totalPrice);
 }
 
@@ -107,7 +107,7 @@ totalPriceFunction();
 
 const basket_countElt = document.querySelector("#basket-count");
 const basket_button = document.querySelector("#basket_button");
-let basket = JSON.parse(sessionStorage.getItem("alixOcrP5"));
+let basket = JSON.parse(localStorage.getItem("alixOcrP5"));
 
 function basketCount() {
     basket_countElt.innerHTML = count;
@@ -131,7 +131,7 @@ form.addEventListener("submit", function (e) {
     
     e.preventDefault();
     let idCommand = idGenerator(10); 
-    sessionStorage.setItem("idCommand", JSON.stringify(idCommand));
+    localStorage.setItem("idCommand", JSON.stringify(idCommand));
     let nameFormulaire = document.querySelector("#name").value.trim();
     let surnameFormulaire = document.querySelector("#surname").value.trim();
     let emailFormulaire = document.querySelector("#mail").value.trim();
