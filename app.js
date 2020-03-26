@@ -14,7 +14,7 @@ function createProduct(product){
         img.className = "imgProduct";
         img.addEventListener('click', function () {
             sessionStorage.setItem("detailProduct", JSON.stringify(product));
-            window.location = "file:///C:/A_DOCS/OPENCLASSROOMS/PROJET/Projet5-js/work/detailproduct.html";
+            window.location = "detailproduct.html";
         })
         productContainer.appendChild(img);
 
@@ -49,7 +49,7 @@ function createProduct(product){
                 
                 commandButton.addEventListener('click', function () {
                     sessionStorage.setItem("detailProduct", JSON.stringify(product));
-                    window.location = "file:///C:/A_DOCS/OPENCLASSROOMS/PROJET/Projet5-js/work/detailproduct.html";
+                    window.location = "detailproduct.html";
                 });
 
     
@@ -57,13 +57,13 @@ function createProduct(product){
      
 };
 
-////////// compteur du bouton basket /////////// 
+////////// compteur du bouton panier /////////// 
 
 const basket_countElt = document.querySelector("#basket-count")
 const basket_button = document.querySelector("#basket_button")
 basket_button.addEventListener('click', function (){
     
-    window.location = "file:///C:/A_DOCS/OPENCLASSROOMS/PROJET/Projet5-js/work/basket.html";
+    window.location = "basket.html";
 });
 
 let basket = sessionStorage.getItem("alixOcrP5");

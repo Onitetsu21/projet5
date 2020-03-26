@@ -2,7 +2,7 @@
 
 function backToMenu(HTML_button){
     HTML_button.addEventListener("click", function() {
-        window.location = "file:///C:/A_DOCS/OPENCLASSROOMS/PROJET/Projet5-js/work/index.html";
+        window.location = "index.html";
     });
 }
 backToMenu_Button = document.querySelector("#backToMenu")
@@ -55,7 +55,7 @@ if(!JSON.parse(sessionStorage.getItem("alixOcrP5"))){
 }
 
 basket_button.addEventListener('click', function (){
-    window.location = "file:///C:/A_DOCS/OPENCLASSROOMS/PROJET/Projet5-js/work/basket.html";
+    window.location = "basket.html";
 });
 
 ////////// Boutton commander ///////////

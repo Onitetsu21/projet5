@@ -16,7 +16,7 @@ sessionStorage.setItem('sumPrice', JSON.stringify(sumPrice));
 
 function backToMenu(HTML_button){
     HTML_button.addEventListener("click", function() {
-        window.location = "file:///C:/A_DOCS/OPENCLASSROOMS/PROJET/Projet5-js/work/index.html";
+        window.location = "index.html";
     });
 }
 backToMenu_Button = document.querySelector("#backToMenu")
@@ -166,7 +166,7 @@ form.addEventListener("submit", function (e) {
    
     request.addEventListener("load", function(f){
         console.log("load ok")
-    window.location = "file:///C:/A_DOCS/OPENCLASSROOMS/PROJET/Projet5-js/work/confirmation.html";
+    window.location = "confirmation.html";
     })
     request.addEventListener("error", function(error){
     console.log(error)
