@@ -127,6 +127,13 @@ function idGenerator(idLength){
 
 const form = document.querySelector("#form");
 
+
+
+function validateEmail(email) {
+    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+  }
+
 form.addEventListener("submit", function (e) {
     
     e.preventDefault();
@@ -148,21 +155,32 @@ form.addEventListener("submit", function (e) {
         sumPrice : sumPrice,
         products: basket
     }
+    if(!nameFormulaire || !surnameFormulaire || !adressFormulaire || !townFormulaire){
+        alert("Veuillez compléter tous les champs du formulaire !")
+    }else if(basket.length < 1){
+        alert("Vous n'avez pas de produit dans le panier !")
+    }
+    else if (validateEmail(emailFormulaire) == false){
+        alert("l'adresse mail n'est pas valide")
+    }else{
 
-    const request = new XMLHttpRequest();
-    request.open("POST", "http://localhost:3000/api/cameras/order");
-    request.setRequestHeader("Content-Type", "application/json");
-    request.send(JSON.stringify(order));
+
+        const request = new XMLHttpRequest();
+        request.open("POST", "http://localhost:3000/api/cameras/order");
+        request.setRequestHeader("Content-Type", "application/json");
+        request.send(JSON.stringify(order));
+        
+        request.addEventListener("load", function(f){
+            console.log("load ok")
+        window.location = "confirmation.html";
+        })
+        request.addEventListener("error", function(error){
+        console.log(error)
+        })
+    }
+
     
-    request.addEventListener("load", function(f){
-        console.log("load ok")
-    window.location = "confirmation.html";
-    })
-    request.addEventListener("error", function(error){
-    console.log(error)
-    })
 });
-
 
 
 

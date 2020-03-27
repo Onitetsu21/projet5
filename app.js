@@ -82,19 +82,22 @@ basketCount(basket);
 
 
 /////////// Requête serveur + création des produits ///////////
-const request = new XMLHttpRequest();
-request.open("GET", "http://localhost:3000/api/cameras");
-request.send();
-request.addEventListener("readystatechange", function () {
-    
-    if (this.readyState == XMLHttpRequest.DONE && this.status == 200) {
-        let response = JSON.parse(this.responseText);
 
-        for(let i = 0; i < response.length; i++) {
-                createProduct(response[i]);
-                
-        }              
+async function getCameras(){
+    let result = await fetch("http://localhost:3000/api/cameras");
+    result = result.json()
+    return result
+}
+
+getCameras().then(function(res){
+    console.log(res)
+    for(let i = 0; i < res.length; i++) {
+        createProduct(res[i]);
     }
-});
+}).catch(function(err){
+    console.log("requête GET ne marche pas")  
+} )
+
+
 
 

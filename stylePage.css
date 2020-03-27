@@ -314,13 +314,13 @@ header h2 {
 .form_item {
     padding: 10px 10px 10px 10px;
 }
-input:invalid {
+/* input:invalid {
     border: 1px solid red;
-  }
+}
   
-  input:valid {
+input:valid {
     border: 1px solid green;
-  }
+} */
 /* Page Confirmation */
 
 .confirmCommand {
